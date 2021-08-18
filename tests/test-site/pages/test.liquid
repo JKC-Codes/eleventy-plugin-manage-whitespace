@@ -1,0 +1,308 @@
+---
+title: 'test'
+permalink: '/test/'
+eleventyExcludeFromCollections: true
+---
+
+<p>testing</p>
+
+<pre></pre>
+
+<div>
+	function foo() {
+		return 'bar';
+	}
+</div>
+
+<pre><code>
+function foo() {
+	return 'bar';
+}
+</code></pre>
+
+<pre><code>
+	function foo() {
+		return 'bar';
+	}
+</code></pre>
+
+<pre>
+trim me
+</pre>
+
+<pre>
+	indented 1 tab
+		indented 2 tabs
+</pre>
+
+<pre>
+		indented 2 tabs
+	indented 1 tab
+</pre>
+
+<pre>
+	indented 1 tab
+indented 0
+</pre>
+
+<pre>
+    4 spaces
+				4 tabs
+</pre>
+
+<pre>
+   3 spaces
+		2 tabs
+</pre>
+
+<pre>
+	<span>	</span>	3 tabs
+	<span>		</span>	4 tabs
+</pre>
+
+<pre>
+	<div class="foo">
+		needs trimming
+	</div>
+	<code>
+		function indentationNeedsFixing() {
+			return bar;
+		}
+	</code>
+</pre>
+
+<pre>
+
+</pre>
+
+<pre>	  	   9</pre>
+
+
+<p>----------------------------------------------------------------------</p>
+
+
+<pre data-trimwhitespace="false"></pre>
+
+<div>
+	function foo() {
+		return 'bar';
+	}
+</div>
+
+<pre data-trimwhitespace="false"><code>
+function foo() {
+	return 'bar';
+}
+</code></pre>
+
+<pre data-trimwhitespace="false"><code>
+	function foo() {
+		return 'bar';
+	}
+</code></pre>
+
+<pre data-trimwhitespace="false">
+trim me
+</pre>
+
+<pre data-trimwhitespace="false">
+	indented 1 tab
+		indented 2 tabs
+</pre>
+
+<pre data-trimwhitespace="false">
+		indented 2 tabs
+	indented 1 tab
+</pre>
+
+<pre data-trimwhitespace="false">
+	indented 1 tab
+indented 0
+</pre>
+
+<pre data-trimwhitespace="false">
+    4 spaces
+				4 tabs
+</pre>
+
+<pre data-trimwhitespace="false">
+   3 spaces
+		2 tabs
+</pre>
+
+<pre data-trimwhitespace="false">
+	<span>	</span>	3 tabs
+	<span>		</span>	4 tabs
+</pre>
+
+<pre data-trimwhitespace="false">
+	<div class="foo">
+		needs trimming
+	</div>
+	<code>
+		function indentationNeedsFixing() {
+			return bar;
+		}
+	</code>
+</pre>
+
+<pre data-trimwhitespace="false">
+
+</pre>
+
+<pre data-trimwhitespace="false">	  	   9</pre>
+
+
+<p>----------------------------------------------------------------------</p>
+
+
+<pre data-reduceIndents="false"></pre>
+
+<div>
+	function foo() {
+		return 'bar';
+	}
+</div>
+
+<pre data-reduceIndents="false"><code>
+function foo() {
+	return 'bar';
+}
+</code></pre>
+
+<pre data-reduceIndents="false"><code>
+	function foo() {
+		return 'bar';
+	}
+</code></pre>
+
+<pre data-reduceIndents="false">
+trim me
+</pre>
+
+<pre data-reduceIndents="false">
+	indented 1 tab
+		indented 2 tabs
+</pre>
+
+<pre data-reduceIndents="false">
+		indented 2 tabs
+	indented 1 tab
+</pre>
+
+<pre data-reduceIndents="false">
+	indented 1 tab
+indented 0
+</pre>
+
+<pre data-reduceIndents="false">
+    4 spaces
+				4 tabs
+</pre>
+
+<pre data-reduceIndents="false">
+   3 spaces
+		2 tabs
+</pre>
+
+<pre data-reduceIndents="false">
+	<span>	</span>	3 tabs
+	<span>		</span>	4 tabs
+</pre>
+
+<pre data-reduceIndents="false">
+	<div class="foo">
+		needs trimming
+	</div>
+	<code>
+		function indentationNeedsFixing() {
+			return bar;
+		}
+	</code>
+</pre>
+
+<pre data-reduceIndents="false">
+
+</pre>
+
+<pre data-reduceIndents="false">	  	   9</pre>
+
+<p>----------------------------------------------------------------------</p>
+
+{% raw %}<!--
+<pre><span></span>1
+		2</pre>
+-->{% endraw %}
+<pre>	<span>	</span>	1
+					2</pre>
+
+{% raw %}<!--
+<pre><code>function foo() {
+	return 'bar';
+}</code></pre>
+-->{% endraw %}
+<pre><code>
+	function foo() {
+		return 'bar';
+	}
+</code></pre>
+
+{% raw %}<!--
+<pre>indented 1 tab
+	indented 2 tabs</pre>
+-->{% endraw %}
+<pre>
+	indented 1 tab
+		indented 2 tabs
+</pre>
+
+{% raw %}<!--
+<pre>4 spaces
+		4 tabs</pre>
+-->{% endraw %}
+<pre>
+    4 spaces
+				4 tabs
+</pre>
+
+{% raw %}<!--
+<pre>3 spaces
+ 2 tabs</pre>
+-->{% endraw %}
+<pre>
+   3 spaces
+		2 tabs
+</pre>
+
+{% raw %}<!--
+<pre><span></span>3 tabs
+<span></span>	4 tabs
+</pre>
+-->{% endraw %}
+<pre>
+	<span>	</span>	3 tabs
+	<span>		</span>	4 tabs
+</pre>
+
+{% raw %}<!--
+<pre><span></span>2 spaces
+   5 spaces</pre>
+-->{% endraw %}
+<pre> <span>
+ </span> 2 spaces
+     5 spaces</pre>
+
+{% raw %}<!--
+<pre><span></span>1 space
+    5 spaces</pre>
+-->{% endraw %}
+<pre> <span>
+</span> 1 space
+     5 spaces</pre>
+
+{% raw %}<!--
+<pre>2 spaces
+<span></span>  4 spaces</pre>
+-->{% endraw %}
+<pre>  2 spaces
+<span>  </span>  4 spaces</pre>
