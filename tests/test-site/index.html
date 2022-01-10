@@ -30,10 +30,28 @@ eleventyExcludeFromCollections: true
 
 	// Display status
 	const control = document.createElement('div');
-	control.innerHTML = `<pre></pre>`;
+	control.innerHTML = `<pre>foo
+bar</pre>
+<pre>foo
+  bar</pre>
+<pre>foo
+bar</pre>
+<pre>foo
+	bar</pre>
+<pre>foo
+bar</pre>
+<pre>foo
+bar</pre>
+<pre>foo
+bar</pre>
+<pre>foo
+bar</pre>
+<pre>foo
+	bar</pre>
+`;
 
 	tests.forEach(test => {
-		const matchesControl = test.querySelector('.code').innerHTML.trim() === control.innerHTML;
+		const matchesControl = test.querySelector('.code').innerHTML === control.innerHTML;
 		const status = test.querySelector('.status');
 
 		if(matchesControl) {
